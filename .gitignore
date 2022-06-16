@@ -1,0 +1,10 @@
+# dependencies
+/node_modules
+
+# prod
+/build
+
+#misc
+/.DS_Store
+settings.json
+
