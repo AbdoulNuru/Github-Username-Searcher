@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import Card from './Card';
+import Card from './userCard';
 import Followers from './Followers';
-import Repos from './Repos';
+import Repos from './Repositories';
 const User = () => {
 	return (
 		<section className='section'>
 			<Wrapper className='section-center'>
-				<Card/>
         <Repos/>
+				<Card/>
 				<Followers/>
 			</Wrapper>
 		</section>

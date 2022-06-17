@@ -67,12 +67,12 @@ const Wrapper = styled.div`
       padding: 0.25rem 0.5rem;
       text-transform: capitalize;
       letter-spacing: var(--spacing);
-      background: var(--clr-primary-5);
+      background: var(--clr-green-dark);
       color: var(--clr-white);
       transition: var(--transition);
       cursor: pointer;
       &:hover {
-        background: var(--clr-primary-8);
+        background: var(--clr-green-light);
         color: var(--clr-primary-1);
       }
     }

@@ -76,8 +76,8 @@ const Wrapper = styled.article`
 			margin-bottom: 0;
 		}
 		a {
-			color: var(--clr-primary-5);
-			border: 1px solid var(--clr-primary-5);
+			color: var(--clr-green-dark);
+			border: 1px solid var(--clr-green-dark);
 			padding: 0.25rem 0.75rem;
 			border-radius: 1rem;
 			text-transform: capitalize;
@@ -105,13 +105,13 @@ const Wrapper = styled.article`
 			}
 		}
 		a {
-			color: var(--clr-primary-5);
+			color: var(--clr-green-dark);
 			transition: var(--transition);
 			svg {
 				color: var(--clr-grey-5);
 			}
 			&:hover {
-				color: var(--clr-primary-3);
+				color: var(--clr-green-light);
 			}
 		}
 	}
