@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import mockUser from './mockData.js/userMockData';
 import mockRepos from './mockData.js/repoMockData';
 import mockFollowers from './mockData.js/followersMockData';
 import mockFollowing from './mockData.js/followingMockData';
-import followers from './mockData.js/followersMockData';
 
 
 const url = 'https://api.github.com';
@@ -16,8 +15,7 @@ const GithubProvider = ({ children }) => {
     [gitRepos, setGitRepos] = useState(mockRepos),
     [gitFollowers, setGitFollowers] = useState(mockFollowers),
     [gitFollowing, setGitFollowing] = useState(mockFollowing),
-    [loading, setLoading] = useState(false),
-    [requests, setRequests] = useState(0);
+    [loading, setLoading] = useState(false);
 
     const searchUser = async (user) => {
       const response = await axios
@@ -27,9 +25,9 @@ const GithubProvider = ({ children }) => {
       console.log(response);
       if (response) {
         setGitUser(response.data);
-        console.log(response);
+    
         const { followers_url, login } = response.data;
-        console.log(response.data);
+        
   
         await Promise.allSettled([
           axios.get(`${url}/users/${login}/repos`),
