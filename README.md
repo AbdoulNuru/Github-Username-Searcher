@@ -37,7 +37,7 @@ After you have opened the application in your browser, type any github username 
 To run the End to End tests, execute the command below from your terminal
 
 ```sh
-npm run test
+npm run test:cy
 ```
 
 
