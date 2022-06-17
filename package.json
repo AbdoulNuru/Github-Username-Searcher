@@ -19,6 +19,7 @@
     "start": "react-scripts start",
     "build": "CI= react-scripts build",
     "test": "react-scripts test",
+    "test:cy": "npx cypress run",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -36,5 +37,7 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "cypress": "^10.1.0"
+  }
 }

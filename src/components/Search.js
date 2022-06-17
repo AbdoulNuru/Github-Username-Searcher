@@ -21,7 +21,7 @@ const Search = () => {
         <form onSubmit={onSubmit}>
           <div className='form-control'>
             <MdSearch/>
-            <input type='text' placeholder='Enter a username' value={username} onChange={(e) => setUsername(e.target.value)}/>
+            <input id='search-keyword' type='text' placeholder='Enter a username' value={username} onChange={(e) => setUsername(e.target.value)}/>
             <button type='submit'>Search</button>
           </div>
         </form>
