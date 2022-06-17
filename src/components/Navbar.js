@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useAuth0 } from '@auth0/auth0-react';
+import {FaGithubSquare} from 'react-icons/fa';
 
 const Navbar = () => {
 	return (
 		<Wrapper>
-			<h3>GitHub username searcher</h3>
+			<FaGithubSquare size={40} style={{marginTop: "-13px"}}/>
+			<h3> username searcher</h3>
 		</Wrapper>
 	);
 };

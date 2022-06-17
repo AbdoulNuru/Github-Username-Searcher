@@ -7,8 +7,8 @@ const User = () => {
 	return (
 		<section className='section'>
 			<Wrapper className='section-center'>
-				<Card/>
         <Repos/>
+				<Card/>
 				<Followers/>
 			</Wrapper>
 		</section>

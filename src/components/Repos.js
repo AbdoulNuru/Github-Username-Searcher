@@ -2,32 +2,10 @@ import React, {useContext} from 'react';
 import styled from 'styled-components';
 import { GithubContext } from '../context/context';
 import {RiGitRepositoryLine} from 'react-icons/ri';
-import { MdBusiness, MdLocationOn, MdLink } from 'react-icons/md';
+import { MdOutlineDescription, MdLocationOn, MdLink } from 'react-icons/md';
+
 const Repos = () => {
     const { gitRepos } = useContext(GithubContext);
-
-//   return (
-//     <Wrapper>
-//       <div className='follower'>
-//        {
-//           gitRepos.map((repo, index) => {
-//             const {name, html_url, avatar_url, description} = repo;
-
-//             return (
-//               <article key={index}>
-//                 <img src={avatar_url} alt={name} />
-//                 <div>
-//                   <h4>{name}</h4>
-//                   <p>{description}</p>
-//                   <a href={html_url}>{html_url}</a>
-//                 </div>
-//               </article>
-//             )
-//           })
-//        }
-//       </div>
-//     </Wrapper>
-//   );
 
   return (
     <Wrapper>
@@ -41,17 +19,18 @@ const Repos = () => {
             const {name, html_url, avatar_url, description} = repo;
 
             return (
-            <>
-                 <h4>{name}</h4>    
+            <>    
                 <p>
                     <RiGitRepositoryLine/>
                     {name}
                 </p>
                 <p>
-                    <MdLocationOn/>
-                    {description}
+                    {
+                        description ? <><MdOutlineDescription/> {description}</>  : null
+                    }
+
                 </p>
-                    <a href={html_url}>
+                <a href={html_url} style={{marginBottom: "20px"}}>
                     <MdLink/>
                     {html_url}
                 </a>
@@ -105,7 +84,7 @@ const Wrapper = styled.article`
 			margin-bottom: 0;
 		}
 		a {
-			color: var(--clr-primary-5);
+			color: var(--clr-green-dark);
 			border: 1px solid var(--clr-primary-5);
 			padding: 0.25rem 0.75rem;
 			border-radius: 1rem;
@@ -134,13 +113,13 @@ const Wrapper = styled.article`
 			}
 		}
 		a {
-			color: var(--clr-primary-5);
+			color: var(--clr-green-dark);
 			transition: var(--transition);
 			svg {
 				color: var(--clr-grey-5);
 			}
 			&:hover {
-				color: var(--clr-primary-3);
+				color: var(--clr-green-light);
 			}
 		}
 	}
