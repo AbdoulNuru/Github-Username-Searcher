@@ -5,7 +5,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 const Navbar = () => {
 	return (
 		<Wrapper>
-			<h3>Welcome</h3>
+			<h3>GitHub username searcher</h3>
 		</Wrapper>
 	);
 };

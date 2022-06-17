@@ -1,5 +1,5 @@
 import React from 'react';
-import { Info, User, Search, Navbar } from '../components';
+import { Info, User, Search, Navbar, Repos } from '../components';
 
 const Dashboard = () => {
   return (

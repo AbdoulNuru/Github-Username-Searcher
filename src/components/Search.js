@@ -21,7 +21,7 @@ const Search = () => {
         <form onSubmit={onSubmit}>
           <div className='form-control'>
             <MdSearch/>
-            <input type='text' placeholder='Search Github Users' value={username} onChange={(e) => setUsername(e.target.value)}/>
+            <input type='text' placeholder='Enter a username' value={username} onChange={(e) => setUsername(e.target.value)}/>
             <button type='submit'>Search</button>
           </div>
         </form>
@@ -33,7 +33,7 @@ const Search = () => {
 const Wrapper = styled.div`
   position: relative;
   display: grid;
-  gap: 1rem 1.75rem;
+  gap: 1rem 40rem;
   @media (min-width: 768px) {
     grid-template-columns: 1fr max-content;
     align-items: center;
